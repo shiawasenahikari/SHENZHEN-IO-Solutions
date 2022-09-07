@@ -1,0 +1,60 @@
+[name] 新●设●计1
+[puzzle] Sz010
+[production-cost] 800
+[power-usage] 232
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......94..............
+......34.1555554......
+.........154.154......
+......94......94......
+......355555556.......
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 4
+[code] 
+1:  slp 1
+2:  mov x0 dat
+3:  tcp dat -999
+4:+ mov dat p1 #R
+5:+ mov x0 x3  #G
+6:+ mov x0 p0  #B
+7:+ mov x0 acc
+8:+ tcp acc 5
+9:- slp acc
+a:- mov p0 p1  #RB
+b:- mov 0 x3   #G
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 4
+[code] 
+1:  slx x0
+2:  mov x0 p1 #G
+
+[chip] 
+[type] LEDRGBV
+[x] 15
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] RADIO
+[x] 7
+[y] 7
+[rotated] true
+[is-puzzle-provided] true
+

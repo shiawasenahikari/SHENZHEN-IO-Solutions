@@ -1,0 +1,92 @@
+[name] min lines & power
+[puzzle] Sz048
+[production-cost] 1000
+[power-usage] 160
+[lines-of-code] 6
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+........95555555555C..
+........A...14.....A..
+..14141CA.9414.....2..
+..1414.AA.A...14.154..
+..94...AA.3415D4.14...
+..35555E3414..355554..
+.......354............
+......................
+......................
+
+[chip] 
+[type] AND
+[x] 9
+[y] 2
+
+[chip] 
+[type] AND
+[x] 11
+[y] 3
+
+[chip] 
+[type] OR
+[x] 3
+[y] 4
+
+[chip] 
+[type] UC4
+[x] 15
+[y] 4
+[code] 
+1:  tcp p1 p0
+2:+ mov x1 acc
+3:+ mov acc x0
+4:  slp 1
+5:- sub 1
+6:- mov acc x0
+
+[chip] 
+[type] DIAL7
+[x] 18
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] AND
+[x] 5
+[y] 5
+
+[chip] 
+[type] DX3
+[x] 13
+[y] 5
+[rotated] true
+
+[chip] 
+[type] NOT
+[x] 3
+[y] 6
+
+[chip] 
+[type] OR
+[x] 11
+[y] 6
+[rotated] true
+
+[chip] 
+[type] NOTE
+[x] 15
+[y] 6
+[code] 
+x0:
+是 否 有 弹 药 剩 余
+只 要 不 是 十 位 个 位
+均 为 0,就 输 出 true
+p0:
+是 否 有 弹 药 剩 余
+且 在 活 着 时 扣 扳 机
+满 足 条 件 时 自 动 开 枪
+无 需 使 用 芯 片 开 枪
+

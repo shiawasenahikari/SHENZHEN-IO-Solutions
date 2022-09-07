@@ -1,0 +1,83 @@
+[name] min power
+[puzzle] Sz022
+[production-cost] 1400
+[power-usage] 67
+[lines-of-code] 33
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.......94..155555554..
+.......A..15555C......
+.......34.14...34154..
+..9555554.154.154154..
+..2.......1555554154..
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 3
+[code] 
+1:  slx x1
+2:  tcp x1 2
+3:- mov 111 x0
+4:- jmp 8
+5:+ mov 11 x2
+6:+ jmp 8
+7:  mov 1 x3
+8:  mov 100 p1
+9:  slp 7
+a:  mov p1 x2
+
+[chip] 
+[type] DX3
+[x] 16
+[y] 3
+
+[chip] 
+[type] UC4X
+[x] 12
+[y] 4
+[code] 
+1:  slx x1
+2:  slp x1
+3:  mov 10 x2
+4:  slp 2
+5:  mov 0 x2
+6:  slp 1
+7:  mov 10 x2
+8:  slp 2
+9:  mov 0 x2
+
+[chip] 
+[type] BRIDGE
+[x] 11
+[y] 5
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 6
+[code] 
+1:  slx x1
+2:  mov x1 x2
+3:  slp 1
+4:  mov 0 x2
+5:  slp 1
+6:  mov 101 x2
+7:  slp 1
+8:  mov 0 x2
+9:  slp 1
+a:  mov 101 x2
+b:  slp 1
+c:  mov 0 x2
+d:  slp 1
+e:  mov 111 x2
+

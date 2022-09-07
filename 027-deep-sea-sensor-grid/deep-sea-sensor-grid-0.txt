@@ -1,0 +1,59 @@
+[name] 新●设●计1
+[puzzle] Sz021
+[production-cost] 700
+[power-usage] 461
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+...15555555555C.......
+.........154.1694.....
+.........154.1574.....
+...155555554.1554.....
+......................
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 4
+[code] 
+1:  slp 1
+2:  mov p1 x0
+3:  mov p0 x0
+4:  teq x2 x3
+5:+ mov x1 acc
+6:+ add x2
+7:+ mov acc x1
+8:+ mov 6 acc
+9:+ mov x0 null
+a:+ mov x0 x3
+b:+ tcp acc 1
+c:+ sub 1
+d:+ jmp 9
+
+[chip] 
+[type] RADIO
+[x] 16
+[y] 4
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] RAM
+[x] 7
+[y] 5
+
+[chip] 
+[type] ID
+[x] 16
+[y] 6
+[is-puzzle-provided] true
+

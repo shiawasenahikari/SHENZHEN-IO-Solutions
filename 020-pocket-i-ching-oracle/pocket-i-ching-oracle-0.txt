@@ -1,0 +1,69 @@
+[name] 新●设●计1
+[puzzle] Sz017
+[production-cost] 800
+[power-usage] 168
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+....15555555C.14......
+....154154.16.14......
+...........15414......
+...........15414......
+..............14......
+..............14......
+......................
+......................
+......................
+
+[chip] 
+[type] DX3
+[x] 13
+[y] 3
+
+[chip] 
+[type] LCDH
+[x] 15
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] DX3
+[x] 6
+[y] 5
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 5
+[code] 
+1:  tcp p1 0
+2:+ mov 999 dat
+3:+ dst 0 x0
+4:+ slp 1
+5:+ dst 1 x0
+6:+ slp 1
+7:+ dst 2 x0
+8:+ tcp dat 200
+9:- mov acc x3
+a:- mov dat x2
+b:+ mov acc dat
+c:  slp 1
+d:+ jmp 3
+
+[chip] 
+[type] DX3
+[x] 13
+[y] 6
+
+[chip] 
+[type] ORACLE
+[x] 2
+[y] 7
+[is-puzzle-provided] true
+

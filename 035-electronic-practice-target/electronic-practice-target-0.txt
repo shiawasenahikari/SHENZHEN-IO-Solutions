@@ -1,0 +1,124 @@
+[name] 新●设●计1
+[puzzle] Sz041
+[production-cost] 2000
+[power-usage] 700
+[lines-of-code] 45
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+..9555554...154.......
+..21555554.15C........
+..95555C14.1C34.15C...
+..214.16....354...A...
+..8...1554...8....A...
+..354.1554...34.1CA...
+.................22...
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 3
+[code] 
+# Calc distance &
+# current score
+1:  slx x0
+2:  mov p0 acc
+3:  sub x0
+4:  mul acc
+5:  mov acc dat
+6:  mov p1 acc
+7:  sub 50
+8:  mul acc
+9:  add dat
+a:  dgt 2
+b:  mov acc x3
+c:  mov x2 x0
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 3
+[rom] 
+4,2,2,2,1,1,1,1,1,-2,-2,-2,-2,-2
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 3
+[code] 
+# Control score-1
+# LED display
+1:  slx x0
+2:  tcp p0 5
+3:- add x0
+4:  mov acc x2
+5:+ teq p0 8
+6:+ slp 2
+7:+ mov acc x2
+8:+ slp 2
+9:+ mov acc x2
+a:+ slp 2
+b:+ mov acc x2
+c:+ sub acc
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 4
+
+[chip] 
+[type] BRIDGE
+[x] 3
+[y] 5
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 6
+
+[chip] 
+[type] UC4
+[x] 9
+[y] 6
+[code] 
+1:  tcp p0 acc
+2:+ add 1
+3:+ mov acc p1
+4:+ mov 50 x0
+5:+ mov x0 x1
+6:- mov 0 x1
+7:  slp 1
+8:+ teq acc 8
+9:+ sub acc
+
+[chip] 
+[type] BRIDGE
+[x] 12
+[y] 6
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 6
+[code] 
+# Control score-2
+# LED display
+1:  slx x0
+2:  tcp p0 4
+3:+ add x0
+4:  mov acc x2
+5:+ teq p0 8
+6:+ slp 2
+7:+ mov acc x2
+8:+ slp 2
+9:+ mov acc x2
+a:+ slp 2
+b:+ mov acc x2
+c:+ sub acc
+

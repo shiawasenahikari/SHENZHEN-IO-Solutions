@@ -1,0 +1,99 @@
+[name] 新●设●计1
+[puzzle] Sz018
+[production-cost] 1900
+[power-usage] 852
+[lines-of-code] 35
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..15554....1554.155C..
+..95555C...1554....2..
+..34.1435555C94.14....
+.....14.14..A3555554..
+..14.14.14.16....8....
+...........1555556....
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 2
+[code] 
+1:  slx x3#FindMax
+2:  mov x3 x1
+3:  mov x0 acc
+4:  add x0
+5:  mov x1 x2
+6:  mov x0 dat
+7:  tcp dat acc
+8:+ mov dat acc
+9:+ mov x1 x2
+a:  teq x1 9
+b:- jmp 6
+c:  mov 0 x0#Clear
+d:  teq x1 9
+e:- jmp c
+
+[chip] 
+[type] UC6
+[x] 3
+[y] 3
+[code] 
+# Statistics
+1:  slp 1
+2:  tcp p1 50
+3:+ mov p0 acc
+4:+ dgt 1
+5:+ mov acc dat
+6:+ mov dat x3
+7:+ mov x2 acc
+8:+ add 1
+9:+ mov dat x3
+a:+ mov acc x2
+b:- teq dat 0
+c:- mov 0 dat
+d:- mov 2 x0
+
+[chip] 
+[type] RAM
+[x] 6
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 17
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 6
+[y] 5
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 5
+[code] 
+# Output
+1:@ mov 50 p1
+2:@ mov 50 p0
+3:  slx x2
+4:  mov x2 acc
+5:  add acc
+6:  mov acc x1
+7:  mov x0 p1
+8:  mov x0 p0
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 6
+[rom] 
+5,60,15,80,75,85,50,50,95,5,50,5,5,5
+

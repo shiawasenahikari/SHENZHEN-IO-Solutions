@@ -1,0 +1,82 @@
+[name] min power (judge by hash table)
+[puzzle] Sz019
+[production-cost] 1300
+[power-usage] 509
+[lines-of-code] 21
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+...........154........
+...........154........
+...............14.....
+...15554155554.154....
+...........154.14.....
+...........154........
+......................
+......................
+
+[chip] 
+[type] NLP
+[x] 9
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 2
+[code] 
+1:  mov x1 acc
+2:  tcp acc -999
+3:+ mov x1 x3
+4:+ mov acc x3
+5:+ tcp x3 0
+6:+ mov 50 p1#Mute
+7:+ slp 1
+8:+ teq x0 0
+9:+ jmp 7
+a:  mov p0 p1#Play
+b:  slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 16
+[y] 3
+
+[chip] 
+[type] DX3
+[x] 7
+[y] 4
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 5
+[code] 
+#   snd.hashCode()
+# = snd.getPart2()
+# / 100 * 2 % 14
+1:  slx x2
+2:  mov x2 dat
+3:  mov dat acc
+4:  dgt 2
+5:  add acc
+6:  mov acc x1
+7:  teq x0 x2
+8:+ teq x0 dat
+9:+ mov 1 x2
+a:- mov 0 x2
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 6
+[rom] 
+-114,-514,495,160,712,917,356,361,138,420,711,573,575,645
+

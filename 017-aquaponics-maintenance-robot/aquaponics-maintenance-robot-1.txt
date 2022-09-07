@@ -1,0 +1,67 @@
+[name] min power
+[puzzle] Sz023
+[production-cost] 800
+[power-usage] 171
+[lines-of-code] 22
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.................154..
+......................
+.................14...
+.............154.154..
+..............94.148..
+..............355556..
+......................
+......................
+
+[chip] 
+[type] RADIO
+[x] 11
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4
+[x] 15
+[y] 3
+[code] 
+1:@ mov x1 null
+2:  mov x0 acc
+3:  tcp acc -1
+4:+ mov acc x1
+5:+ slx x1
+6:+ gen p1 x0 x1
+7:+ gen p0 x0 1
+8:- slp 1
+
+[chip] 
+[type] BRIDGE
+[x] 18
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 15
+[y] 5
+[code] 
+1:@ mov 50 p1
+2:  teq dat acc
+3:+ mov 0 x2
+4:+ slx x2
+5:+ mov x2 dat
+6:  tcp dat acc
+7:- gen p1 0 1
+8:+ mov 100 p1
+9:+ slp 1
+a:  mov 50 p1
+b:- slp 1
+c:- sub 1
+d:+ slp 1
+e:+ add 1
+

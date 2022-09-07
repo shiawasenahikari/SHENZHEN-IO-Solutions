@@ -1,0 +1,132 @@
+[name] 新●设●计1
+[puzzle] Sz046
+[production-cost] 2700
+[power-usage] 1012
+[lines-of-code] 53
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.......95555554.155C..
+...955569555C......2..
+...34.156...354.1554..
+..154.1554........14..
+.....14.14.1C94...14..
+.....14.15556A..1414..
+........155556........
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 2
+[code] 
+# Query the cell
+# row to print
+1:  slx x3
+2:  mov x3 acc
+3:  tcp p1 5
+4:- mov p1 x2
+5:- mov 0 x2
+6:- jmp 1
+7:  mov p1 x1
+8:  tgt acc 2
+9:+ sub 3
+a:- mov x0 null
+b:  mov x0 x2
+c:  mov acc x2
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 2
+[code] 
+# Control valves
+1:  slx x0
+2:  mov x0 acc
+3:  dgt x0
+4:  tcp acc 0
+5:+ mov 10 x3
+6:+ tcp acc 4
+7:+ mov 1 x3
+8:- mov 100 x3
+9:  slp 1
+a:  mov 0 x3
+
+[chip] 
+[type] BANK
+[x] 3
+[y] 3
+[rom] 
+0,20,40,0,0,0,424,242,626,226,20,220,606,6
+
+[chip] 
+[type] DX3
+[x] 17
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 4
+[code] 
+# Calculate the
+# real-time X
+# coordinate
+1:  slx x1
+2:  mov x1 p0
+3:  tgt acc 2
+4:  mov acc x2
+5:  slp 1
+6:- tcp acc 5
+7:- add 1
+8:- jmp 4
+9:+ tcp acc 0
+a:+ sub 1
+b:+ jmp 4
+
+[chip] 
+[type] UC4X
+[x] 4
+[y] 5
+[code] 
+# Broadcast
+1:  slx x1
+2:  mov x1 acc
+3:  add acc
+4:  mov acc x0
+5:  mov acc x2
+6:  mov acc x3
+7:  slp 6
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 5
+[code] 
+# Control motor y
+1:  mov 50 p1
+2:  slx x0
+3:  tcp x0 -1
+4:- mov 0 p1
+5:  slp 5
+6:+ mov 100 p1
+7:  slp 1
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 7
+[code] 
+# Control motor x
+1:  mov 50 p1
+2:  slx x0
+3:  tcp x0 -1
+4:+ not
+5:+ mov acc p1
+6:+ slp 5
+

@@ -1,0 +1,64 @@
+[name] min cost & lines
+[puzzle] Sz026
+[production-cost] 600
+[power-usage] 306
+[lines-of-code] 13
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..................8...
+.........14.....156...
+...89DDC.14.1554154...
+...37777554.14..15C...
+..................2...
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 4
+[code] 
+1:  tcp dat 10
+2:  mov 1 dat
+3:  mov x2 acc
+4:+ mov 10 dat
+5:+ mov x1 acc
+6:- mov 100 dat
+7:- mov x0 acc
+8:  mov dat x3
+9:  sub 1
+a:  tcp p0 acc
+b:+ mov x3 dat
+c:  slp 1
+d:- jmp 9
+
+[chip] 
+[type] DIAL6
+[x] 13
+[y] 4
+[is-puzzle-provided] true
+
+[chip] 
+[type] DX3
+[x] 15
+[y] 4
+
+[chip] 
+[type] DIAL5
+[x] 8
+[y] 5
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL4
+[x] 8
+[y] 6
+[is-puzzle-provided] true
+

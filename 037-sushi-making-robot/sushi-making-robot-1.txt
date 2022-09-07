@@ -1,0 +1,89 @@
+[name] min power
+[puzzle] Sz043
+[production-cost] 1800
+[power-usage] 528
+[lines-of-code] 37
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+.........955554.1554..
+.........A..154.1554..
+.........A............
+.........34.15555554..
+............14.15554..
+...............14.14..
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 2
+[code] 
+1:  mov 50 p1
+2:  slx x0
+3:  mov x0 acc
+4:  slp 2
+5:  tgt acc 2
+6:- mov 100 p1
+7:+ mov 0 p1
+8:  slp 1
+9:+ sub 2
+a:  mov acc x3
+
+[chip] 
+[type] UC4
+[x] 16
+[y] 2
+[code] 
+1:  mov 50 p1
+2:  slx x0
+3:  tgt x0 1
+4:  slp 2
+5:- mov 100 p1
+6:+ mov 0 p1
+7:  slp 1
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 3
+[code] 
+1:  mov 50 p1
+2:  slx x0
+3:  mov x0 acc
+4:  slp 2
+5:  tgt acc 4
+6:- mov 100 p1
+7:+ mov 0 p1
+8:  slp 1
+9:+ sub 4
+a:  mov acc x3
+
+[chip] 
+[type] RADIO
+[x] 10
+[y] 6
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 14
+[y] 6
+[code] 
+1:  mov x1 acc
+2:  tcp acc 0
+3:+ mov 100 p1
+4:+ slp 1
+5:+ mov acc x3
+6:+ mov 30 p1
+7:  slp 1
+8:+ mov 0 p1
+9:+ slp 1
+a:+ mov x1 x0
+
