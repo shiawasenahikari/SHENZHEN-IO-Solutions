@@ -3,7 +3,7 @@
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/017-aquaponics-maintenance-robot/screenshot0.png)
 
-8/171/22 (MIN POWER) SOLUTION
+8/163/22 (MIN POWER) SOLUTION
 -----------------------------
 
 ![screenshot1](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/017-aquaponics-maintenance-robot/screenshot1.png)

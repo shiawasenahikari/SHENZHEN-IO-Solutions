@@ -1,7 +1,7 @@
 [name] min power
 [puzzle] Sz023
 [production-cost] 800
-[power-usage] 171
+[power-usage] 163
 [lines-of-code] 22
 
 [traces] 
@@ -50,18 +50,18 @@
 [x] 15
 [y] 5
 [code] 
-1:@ mov 50 p1
-2:  teq dat acc
-3:+ mov 0 x2
-4:+ slx x2
-5:+ mov x2 dat
-6:  tcp dat acc
-7:- gen p1 0 1
-8:+ mov 100 p1
-9:+ slp 1
-a:  mov 50 p1
-b:- slp 1
-c:- sub 1
-d:+ slp 1
-e:+ add 1
+1:  mov 50 p1
+2:- slp 1
+3:- sub 1
+4:+ slp 1
+5:+ add 1
+6:  teq dat acc
+7:+ mov 0 x2
+8:+ slx x2
+9:+ mov x2 dat
+a:  tcp dat acc
+b:- mov 0 p1
+c:- slp 1
+d:+ mov 100 p1
+e:+ slp 1
 
