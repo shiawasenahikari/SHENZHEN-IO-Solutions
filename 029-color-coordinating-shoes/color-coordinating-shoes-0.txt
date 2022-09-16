@@ -1,8 +1,8 @@
 [name] 新●设●计1
 [puzzle] Sz018
 [production-cost] 1900
-[power-usage] 852
-[lines-of-code] 35
+[power-usage] 794
+[lines-of-code] 30
 
 [traces] 
 ......................
@@ -11,8 +11,8 @@
 ......................
 ......................
 ......................
-..15554....1554.155C..
-..95555C...1554....2..
+..15554......14.155C..
+..95555C.....14....2..
 ..34.1435555C94.14....
 .....14.14..A3555554..
 ..14.14.14.16....8....
@@ -25,40 +25,39 @@
 [x] 9
 [y] 2
 [code] 
-1:  slx x3#FindMax
-2:  mov x3 x1
+# Find Max
+1:  slx x3
+2:  mov x3 dat
 3:  mov x0 acc
-4:  add x0
-5:  mov x1 x2
-6:  mov x0 dat
-7:  tcp dat acc
-8:+ mov dat acc
-9:+ mov x1 x2
-a:  teq x1 9
-b:- jmp 6
-c:  mov 0 x0#Clear
-d:  teq x1 9
-e:- jmp c
+4:  tcp acc dat
+5:+ mov acc dat
+6:+ mov x1 x2
+7:  tcp x0 x1
+8:- jmp 3
+# Clear
+9:  mov 0 x0
+a:  tcp x0 x1
+b:- jmp 9
 
 [chip] 
 [type] UC6
 [x] 3
 [y] 3
 [code] 
-# Statistics
-1:  slp 1
+1:  slp 1 #Stat
 2:  tcp p1 50
 3:+ mov p0 acc
-4:+ dgt 1
-5:+ mov acc dat
-6:+ mov dat x3
-7:+ mov x2 acc
-8:+ add 1
-9:+ mov dat x3
-a:+ mov acc x2
-b:- teq dat 0
-c:- mov 0 dat
-d:- mov 2 x0
+4:+ sub 30
+5:+ dst 0 8
+6:+ mov acc dat
+7:+ mov dat x3
+8:+ mov x2 acc
+9:+ add 1
+a:+ mov dat x3
+b:+ mov acc x2
+c:- teq dat 0
+d:- mov 0 dat
+e:- mov 0 x0
 
 [chip] 
 [type] RAM
@@ -76,24 +75,47 @@ d:- mov 2 x0
 [y] 5
 
 [chip] 
+[type] NOTE
+[x] 8
+[y] 5
+[code] 
+RAM:
+8  -> RED
+18 -> ORANGE
+28 -> YELLOW
+38 -> GREEN
+48 -> BLUE
+58 -> VIOLET
+
+[chip] 
 [type] UC6
 [x] 14
 [y] 5
 [code] 
 # Output
 1:@ mov 50 p1
-2:@ mov 50 p0
+2:  mov x0 p0
 3:  slx x2
-4:  mov x2 acc
-5:  add acc
-6:  mov acc x1
-7:  mov x0 p1
-8:  mov x0 p0
+4:  mov x2 x1
+5:  mov x0 p1
 
 [chip] 
 [type] BANK
-[x] 9
+[x] 11
 [y] 6
 [rom] 
-5,60,15,80,75,85,50,50,95,5,50,5,5,5
+50,5,5,75,85,50,5,15,80,95,5,5,60,50
+
+[chip] 
+[type] NOTE
+[x] 8
+[y] 7
+[code] 
+ROM:
+9  -> (95,  5)
+19 -> (50,  5)
+29 -> ( 5,  5)
+39 -> ( 5, 60)
+49 -> (15, 80)
+59 -> (75, 85)
 
