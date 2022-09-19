@@ -1,7 +1,7 @@
 [name] min cost
 [puzzle] Sz040
 [production-cost] 1700
-[power-usage] 544
+[power-usage] 541
 [lines-of-code] 30
 
 [traces] 
@@ -28,12 +28,12 @@
 # Check whether
 # it's time to
 # feed cat 3
-1:  nop
-2:  teq p0 3
-3:+ mov p0 x1
-4:+ mov p1 x1
-5:+ slp x0
-6:- slp 1
+1:  teq p0 3
+2:+ mov p0 x1
+3:+ mov p1 x1
+4:+ slp x0
+5:- slp 1
+6:  nop
 
 [chip] 
 [type] DIAL10
@@ -79,12 +79,12 @@ a:  mov p0 p1
 # Check whether
 # it's time to
 # feed cat 2
-1:  nop
-2:  teq p0 2
-3:+ mov p0 x1
-4:+ mov p1 x1
-5:+ slp x0
-6:- slp 1
+1:  teq p0 2
+2:+ mov p0 x1
+3:+ mov p1 x1
+4:+ slp x0
+5:- slp 1
+6:  nop
 
 [chip] 
 [type] DIAL13
@@ -132,12 +132,12 @@ a:  mov p0 p1
 # Check whether
 # it's time to
 # feed cat 1
-1:  nop
-2:  teq p0 1
-3:+ mov p0 x0
-4:+ mov p1 x0
-5:+ slp x1
-6:- slp 1
+1:  teq p0 1
+2:+ mov p0 x0
+3:+ mov p1 x0
+4:+ slp x1
+5:- slp 1
+6:  nop
 
 [chip] 
 [type] DIAL8
