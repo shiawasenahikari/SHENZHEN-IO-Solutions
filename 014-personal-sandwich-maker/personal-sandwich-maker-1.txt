@@ -1,8 +1,8 @@
 [name] min lines
 [puzzle] Sz007EZ
 [production-cost] 800
-[power-usage] 83
-[lines-of-code] 12
+[power-usage] 107
+[lines-of-code] 10
 
 [traces] 
 ......................
@@ -35,23 +35,36 @@
 [x] 12
 [y] 5
 [code] 
-1:  slx x2
-2:  mov x2 x1
-3:  gen p1 1 0
-4:  mov 100 x3
-5:  slp 1
-6:  teq x1 2
-7:- mov 10 x3
-8:- slp 1
-9:  mov 1 x3
-a:  slp x0
-b:  gen p1 1 x3
-c:  gen p0 3 0
+1:@ teq 0 0
+2:+ slx x2
+3:+ mov x2 x1
+4:+ gen p1 1 0
+5:  mov x0 x3
+6:  slp 1
+7:  mov x0 x1#next
+8:  teq x1 2 #end?
+9:+ gen p1 1 x3
+a:+ gen p0 3 0
+
+[chip] 
+[type] NOTE
+[x] 5
+[y] 6
+[code] 
+Linked List
+SW1:100->#200aka#4
+->10->#6->1->end
+
+SW2:200->#300aka#6
+->1->end
+
+SW3:300->#10->10->
+#12->1->#0->1->end
 
 [chip] 
 [type] BANK
 [x] 8
 [y] 6
 [rom] 
-0,1,1,2,0,0,0,0,0,0,0,0,0,0
+1,100,200,300,10,6,1,2,0,0,10,12,1,0
 
