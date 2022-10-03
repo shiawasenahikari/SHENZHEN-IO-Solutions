@@ -1,8 +1,8 @@
 [name] min power
 [puzzle] Sz038
-[production-cost] 1800
-[power-usage] 343
-[lines-of-code] 39
+[production-cost] 1500
+[power-usage] 324
+[lines-of-code] 35
 
 [traces] 
 ......................
@@ -10,20 +10,15 @@
 ......................
 ......................
 ......................
-...954..954...........
-...A94.1614.154.......
-...AA..1554.15555554..
-...A34...8..154.1554..
-...354...34..94....8..
+....154...............
+....1D4.154...........
+.....A..154.15555554..
+.....355554.154.1554..
+.............94....8..
 .............3555556..
 ......................
 ......................
 ......................
-
-[chip] 
-[type] RAM
-[x] 5
-[y] 4
 
 [chip] 
 [type] UC6
@@ -32,17 +27,16 @@
 [code] 
 1:  mov 50 p1
 2:  slx x0
-3:  mov x0 acc
-4:  tcp p0 50
-5:- mov acc x3
-6:- slp 2
-7:  mov 100 p1
-8:  slp acc
-9:+ mov acc x3
-a:  mov 50 p1
-b:  slp 2
-c:  mov 0 p1
-d:  slp acc
+3:  teq x0 0
+4:+ mov x1 x3
+5:+ slp 2
+6:  mov 100 p1
+7:  slp x1
+8:- mov x1 x3
+9:  mov 50 p1
+a:  slp 2
+b:  mov 0 p1
+c:  slp x1
 
 [chip] 
 [type] UC4
@@ -60,42 +54,33 @@ d:  slp acc
 9:  mov p0 p1
 
 [chip] 
-[type] BRIDGE
-[x] 9
-[y] 5
-
-[chip] 
 [type] UC6
-[x] 5
+[x] 6
 [y] 6
 [code] 
-1:@ teq 0 0
-2:+ slx x3
-3:+ mov x3 dat
-4:  mov x1 acc
-5:  teq x0 dat
-6:+ mov acc x1
-7:+ mov x3 x0
-8:+ mov x1 x2
-9:+ mov 0 x1
+1:  slp 1
+2:  tcp x3 1
+3:- jmp 1
+4:  mov 0 x1
+5:  mov 0 dat
+6:+ mov x3 dat
+7:  mov x1 acc
+8:  teq x0 dat
+9:- jmp 7
+a:  mov acc x1
+b:  teq dat 0
+c:- mov 0 x0
+d:+ mov x3 x0
+e:  mov dat x2
 
 [chip] 
-[type] UC4
-[x] 10
+[type] RAM
+[x] 2
 [y] 7
-[code] 
-1:  slp 1
-2:  tcp x1 1
-3:- jmp 1
-4:+ mov x1 x0
-5:  mov p0 x0
-6:+ mov 100 p0
-7:+ jmp 1
-8:  mov x1 x0
 
 [chip] 
 [type] RADIO
-[x] 14
+[x] 10
 [y] 7
 [rotated] true
 [is-puzzle-provided] true
