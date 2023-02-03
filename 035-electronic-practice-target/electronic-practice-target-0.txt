@@ -1,7 +1,7 @@
 [name] 新●设●计1
 [puzzle] Sz041
 [production-cost] 2000
-[power-usage] 700
+[power-usage] 699
 [lines-of-code] 45
 
 [traces] 
@@ -55,10 +55,10 @@ c:  mov x2 x0
 # Control score-1
 # LED display
 1:  slx x0
-2:  tcp p0 5
+2:  tcp p0 4
 3:- add x0
 4:  mov acc x2
-5:+ teq p0 8
+5:+ teq p0 7
 6:+ slp 2
 7:+ mov acc x2
 8:+ slp 2
@@ -88,12 +88,12 @@ c:+ sub acc
 [y] 6
 [code] 
 1:  tcp p0 acc
-2:+ add 1
-3:+ mov acc p1
-4:+ mov 50 x0
-5:+ mov x0 x1
-6:- mov 0 x1
-7:  slp 1
+2:+ mov acc p1
+3:+ mov 50 x0
+4:+ mov x0 x1
+5:- mov 0 x1
+6:  slp 1
+7:+ add 1
 8:+ teq acc 8
 9:+ sub acc
 
@@ -110,10 +110,10 @@ c:+ sub acc
 # Control score-2
 # LED display
 1:  slx x0
-2:  tcp p0 4
+2:  tcp p0 3
 3:+ add x0
 4:  mov acc x2
-5:+ teq p0 8
+5:+ teq p0 7
 6:+ slp 2
 7:+ mov acc x2
 8:+ slp 2
