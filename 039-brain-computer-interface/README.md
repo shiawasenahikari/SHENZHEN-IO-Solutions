@@ -1,4 +1,4 @@
-20/1763/35 (MIN COST & LINES) SOLUTION
+17/1347/31 (MIN COST & LINES) SOLUTION
 --------------------------------------
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/039-brain-computer-interface/screenshot0.png)
