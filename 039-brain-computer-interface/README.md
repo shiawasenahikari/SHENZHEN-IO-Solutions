@@ -3,7 +3,7 @@
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/039-brain-computer-interface/screenshot0.png)
 
-22/756/50 (MIN POWER) SOLUTION
+22/725/54 (MIN POWER) SOLUTION
 ------------------------------
 
 ![screenshot1](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/039-brain-computer-interface/screenshot1.png)

@@ -1,8 +1,8 @@
 [name] min power
 [puzzle] Sz045
 [production-cost] 2200
-[power-usage] 756
-[lines-of-code] 50
+[power-usage] 725
+[lines-of-code] 54
 
 [traces] 
 ......................
@@ -36,13 +36,15 @@
 3:  dst 0 dat
 4:  tcp acc 0
 5:+ mov 0 x2
-6:  tcp 100 dat
-7:+ tcp dat 1
-8:- tcp dat 101
-9:+ mov 1 x2
-a:  tcp dat 11
-b:+ mov 2 x2
-c:  mov x1 x3
+6:  tcp dat 99
+7:- tcp acc dat
+8:- mov 1 x2
+9:- jmp e
+a:+ tcp dat 109
+b:+ mov 1 x2
+c:+ mov 2 x2
+d:- mov 2 x2
+e:  mov x1 x3
 
 [chip] 
 [type] UC6
@@ -78,12 +80,14 @@ d:  slx x3
 3:  dst 0 dat
 4:  tcp acc 0
 5:+ mov 3 x3
-6:  tcp 100 dat
-7:+ tcp dat 1
-8:- tcp dat 101
-9:+ mov 4 x3
-a:  tcp dat 11
-b:+ mov 5 x3
+6:  tcp dat 99
+7:- tcp acc dat
+8:- mov 4 x3
+9:- jmp 1
+a:+ tcp dat 109
+b:+ mov 4 x3
+c:+ mov 5 x3
+d:- mov 5 x3
 
 [chip] 
 [type] DX3
