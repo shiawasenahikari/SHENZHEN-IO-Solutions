@@ -1,8 +1,8 @@
 [name] min power
 [puzzle] Sz045
 [production-cost] 2200
-[power-usage] 816
-[lines-of-code] 48
+[power-usage] 756
+[lines-of-code] 50
 
 [traces] 
 ......................
@@ -97,15 +97,17 @@ b:+ mov 5 x3
 [y] 6
 [code] 
 1:  teq x0 x1
-2:+ mov x0 x2
-3:+ jmp c
-4:  mov x0 acc
-5:  add x1
-6:  teq acc 100
-7:- teq acc 10
-8:- teq acc 1
-9:- mov acc x2
-a:- slp 2
-b:+ mov -1 x2
+2:+ jmp b
+3:  mov x0 acc
+4:  add x1
+5:  teq acc 100
+6:- teq acc 10
+7:- teq acc 1
+8:+ mov -1 x2
+9:+ slp 1
+a:+ teq x0 x1
+b:+ mov x0 x2
 c:+ slp 1
+d:- mov acc x2
+e:- slp 2
 
