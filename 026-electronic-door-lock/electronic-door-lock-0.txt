@@ -1,7 +1,7 @@
 [name] safe version
 [puzzle] Sz031
 [production-cost] 700
-[power-usage] 484
+[power-usage] 357
 [lines-of-code] 14
 
 [traces] 
@@ -26,19 +26,19 @@
 [y] 4
 [code] 
 1:  slx x0
-2:  mov x0 dat
-3:  teq dat 9
-4:- dst 0 1
-5:  teq p0 0
-6:- mov dat x2
-7:+ teq dat x2
-8:- dst 1 1
-9:  tcp x3 10
-a:- jmp 2
-b:  teq acc 11
-c:- gen p1 6 0
-d:  mov 0 x3
-e:  sub acc
+2:  mov 100 acc
+3:  add x0
+4:  tcp p0 50
+5:+ mov acc x2
+6:- teq acc x2
+7:- dst 2 0
+8:  tcp x3 10
+9:- jmp 3
+a:  teq p0 0
+b:+ tcp acc 89
+c:+ mov 100 p1
+d:+ slp 6
+e:  mov p1 x3
 
 [chip] 
 [type] RAM
