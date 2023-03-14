@@ -1,8 +1,8 @@
 [name] 新●设●计1
 [puzzle] Sz039
-[production-cost] 700
-[power-usage] 375
-[lines-of-code] 13
+[production-cost] 500
+[power-usage] 188
+[lines-of-code] 12
 
 [traces] 
 ......................
@@ -12,8 +12,8 @@
 ......................
 ......................
 ..95555555C...........
-..A..154.16...........
-..A..154.1555554......
+..A......16...........
+..A......1555554......
 ..A.9554..............
 ..A.A.................
 ..2.2.................
@@ -31,24 +31,18 @@
 [x] 7
 [y] 4
 [code] 
+# Standby
 1:@ mov -999 acc
-2:  tcp dat 0
-3:+ add x0
-4:  tcp p1 0
-5:+ tcp acc -1
-6:- sub acc
-7:+ mov x0 dat
-8:  tcp p0 0
-9:+ teq dat 0
-a:+ not
-b:+ mul -999
-c:  mov acc x3
-d:  slp 1
-
-[chip] 
-[type] BANK
-[x] 3
-[y] 5
-[rom] 
-1,0,1,0,1,0,1,0,1,0,1,0,1,0
+2:  tcp p0 p1
+3:+ sub 999
+4:+ tcp acc -999
+5:- teq acc -999
+6:+ sub acc
+# Timing
+7:- slp 2
+8:- add 1
+9:  mov acc x3
+a:- tcp p1 100
+b:- jmp 7
+c:  slp 1
 
