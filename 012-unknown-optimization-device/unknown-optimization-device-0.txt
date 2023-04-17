@@ -1,7 +1,7 @@
-[name] min lines
+[name] min cost
 [puzzle] Sz015
 [production-cost] 600
-[power-usage] 650
+[power-usage] 645
 [lines-of-code] 13
 
 [traces] 
@@ -25,8 +25,8 @@
 [x] 7
 [y] 4
 [code] 
-1:  tgt p0 39
-2:+ tgt p1 39
+1:  tgt p1 39
+2:+ tgt p0 39
 3:+ tlt p1 80
 4:+ tlt p0 80
 5:+ mov 50 x1
