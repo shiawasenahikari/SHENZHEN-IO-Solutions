@@ -1,7 +1,7 @@
 [name] min power
 [puzzle] Sz009
 [production-cost] 1400
-[power-usage] 240
+[power-usage] 232
 [lines-of-code] 20
 
 [traces] 
@@ -44,16 +44,16 @@
 [x] 10
 [y] 4
 [code] 
-1:@ teq 0 0
-2:  slp 1
+1:  slp 1
+2:  tcp x2 0
 3:+ mov p0 acc
-4:  tcp x2 0
-5:+ mov x2 x1
-6:+ sub x0
-7:+ tlt acc 1
-8:- slp 1
-9:+ mov acc x3
-a:+ gen p1 4 2
+4:+ mov x2 x1
+5:+ sub x0
+6:+ tgt acc 0
+7:+ slp 2
+8:+ jmp 4
+9:- mov acc x3
+a:- gen p1 4 2
 
 [chip] 
 [type] UC4
