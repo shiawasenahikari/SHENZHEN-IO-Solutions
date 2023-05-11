@@ -1,4 +1,4 @@
-10/365/28 (MIN COST) SOLUTION
+10/351/22 (MIN COST) SOLUTION
 -----------------------------
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/031-safetynet-tracking-badge/screenshot0.png)
