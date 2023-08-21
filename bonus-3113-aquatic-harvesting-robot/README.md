@@ -1,4 +1,4 @@
-26/4447/61 SOLUTION
+26/3924/65 SOLUTION
 -------------------
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/bonus-3113-aquatic-harvesting-robot/screenshot0.png)

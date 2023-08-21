@@ -1,8 +1,8 @@
 [name] 新●设●计1
 [puzzle] Sz042
 [production-cost] 2600
-[power-usage] 4447
-[lines-of-code] 61
+[power-usage] 3924
+[lines-of-code] 65
 
 [traces] 
 ......................
@@ -13,9 +13,9 @@
 ..9555555554..........
 ..A155555554.155554...
 ..B54.14.154954..154..
-..A94.14.1556154.1C...
-..AA.....154..8...28..
-..A34.....94..34.156..
+..A94.1495556154.1C...
+..AA....A154..8...28..
+..A34.156.94..34.156..
 ..354.14..355554.14...
 ......................
 ......................
@@ -25,14 +25,14 @@
 [x] 4
 [y] 2
 [code] 
-# Receive new task
-# Only enable
-# line 4 when
-# initialization
-@ teq 0 1
-  mov x2 x0
-+ mov x2 x0
-- teq x0 x1
+@ teq 0 1 #Receive
+  mov x2 x0 #Tasks
++ mov x2 acc
++ mov acc x0
++ add 500
++ add 500
++ mov acc x3
+- teq x1 0
 + slp 1
 
 [chip] 
@@ -86,20 +86,20 @@
 [x] 7
 [y] 4
 [code] 
-  teq x1 0 #Target
-+ mov dat x3 #Scan
-+ slp 1
-+ tlt dat 2
-+ mov 10 dat
-  mov x0 acc
-  tlt acc 0
-+ mov x0 null
-- mov acc x2
-- mov x0 x2
-- mov x2 acc
-- tcp acc dat
-- mov acc dat
-- mov x1 p1
+  tgt x1 0 #Target
+- mov acc x3 #Scan
+- slp 1
+- sub x3
+- tlt acc 1
++ mov x0 dat
++ tcp dat -999
++ mov dat x2
++ mov x0 x2
++ mov x2 dat
++ tlt dat acc
+- tlt acc 1
++ mov dat acc
++ mov x1 p1
 
 [chip] 
 [type] BRIDGE
@@ -145,7 +145,7 @@
 @ teq x2 0
 + slx x2
 + mov x2 dat
-+ tlt dat 10
++ tgt dat 0
 + mov p0 acc
 + sub 2
 + mov acc x0
