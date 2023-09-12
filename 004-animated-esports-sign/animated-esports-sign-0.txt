@@ -1,7 +1,7 @@
 [name] min cost
 [puzzle] Sz001
 [production-cost] 500
-[power-usage] 323
+[power-usage] 125
 [lines-of-code] 9
 
 [traces] 
@@ -11,12 +11,12 @@
 ......................
 ......................
 ......................
-.....95555555555C.....
-.....A.........16.....
-.....B5415D554.1C.....
-.....A....A955416.....
-.....A....AA954.......
-.....34.1562214.......
+.........9555555C.....
+.........A.....16.....
+.........A.954.1C.....
+.........A.B55416.....
+......941E.A954.......
+......2.16.2214.......
 ......................
 ......................
 
@@ -29,21 +29,46 @@
 [chip] 
 [type] NOT
 [x] 7
-[y] 5
+[y] 3
 [rotated] true
+
+[chip] 
+[type] NOTE
+[x] 6
+[y] 4
+[code] 
+TIME 6~9 (MOD 10)
+mov 10 x1
+slp 1
+mov 100 x1
+gen p1 1 1
+mov 10 x1
+gen p1 1 0
 
 [chip] 
 [type] UC4
 [x] 13
 [y] 5
 [code] 
-1:  mov 10 x1
-2:  tcp acc 6
-3:- mov 1 x1
-4:+ tlt acc 9
+1:  tcp p0 50
+2:- mov 1 x1
+3:+ mov 10 x1
+4:  slp 1
 5:+ mov 100 x1
-6:  slp 1
-7:  add 1
-8:  dgt 0
-9:  mov p1 p0
+6:  gen p1 1 1
+7:- gen p1 1 1
+8:+ mov 10 x1
+9:  gen p1 1 0
+
+[chip] 
+[type] NOTE
+[x] 6
+[y] 6
+[code] 
+TIME 0~5 (MOD 10)
+mov 1 x1
+slp 1
+gen p1 1 1
+gen p1 1 1
+gen p1 1 0
 

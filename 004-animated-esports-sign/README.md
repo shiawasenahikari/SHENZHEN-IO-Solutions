@@ -1,4 +1,4 @@
-5/323/9 (MIN COST) SOLUTION
+5/125/9 (MIN COST) SOLUTION
 ----------------------------
 
 ![screenshot0](https://github.com/shiawasenahikari/Shenzhen-IO-Solutions/blob/master/004-animated-esports-sign/screenshot0.png)
