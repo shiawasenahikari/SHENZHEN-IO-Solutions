@@ -1,7 +1,7 @@
-[name] min cost
+[name] min cost & power
 [puzzle] Sz014
 [production-cost] 500
-[power-usage] 172
+[power-usage] 151
 [lines-of-code] 9
 
 [traces] 
@@ -36,11 +36,11 @@
 [y] 5
 [code] 
 1:  slp 1
-2:  add 5
-3:  tcp p0 x0
-4:- mov -5 acc
-5:+ dst 0 0
-6:+ mul 5
+2:  teq p0 x0
+3:+ slp 1
+4:  add 50
+5:  tcp p0 x0
+6:- mov -50 acc
 7:+ mov acc p1
 8:+ sub 100
 9:+ mov acc x1
