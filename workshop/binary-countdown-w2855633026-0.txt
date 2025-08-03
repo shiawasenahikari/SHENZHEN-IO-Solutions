@@ -1,0 +1,81 @@
+[name] 新●设●计1
+[puzzle] w2855633026
+[production-cost] 1500
+[power-usage] 450
+[lines-of-code] 29
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.14.14................
+....14.14.............
+.......14.14..........
+..........14.14.......
+.............14.14....
+.............94..8....
+.............35556....
+......................
+
+[chip] 
+[type] UC4
+[x] 14
+[y] 2
+[code] 
+@ mov 100 p0
+  mov 100 p1
+  slx x0
+  mov x0 p1
+  slx x0
+  mov x0 p0
+
+[chip] 
+[type] UC4
+[x] 11
+[y] 3
+[code] 
+  mov 100 p1
+  slx x0
+  mov x0 p1
+  slx x0
+  mov x0 x1
+
+[chip] 
+[type] UC4
+[x] 8
+[y] 4
+[code] 
+  mov 100 p1
+  slx x0
+  mov x0 p1
+  slx x0
+  mov x0 x1
+
+[chip] 
+[type] UC4
+[x] 5
+[y] 5
+[code] 
+  mov 100 p1
+  slx x0
+  mov x0 p1
+  slx x0
+  mov x0 x1
+
+[chip] 
+[type] UC4
+[x] 2
+[y] 6
+[code] 
+@ dst 2 x0
+@ sub 200
+  tlt acc 0
++ mov 0 x1
++ add 200
+  mov acc p1
+  slp 1
+  sub 100
+

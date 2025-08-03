@@ -1,0 +1,93 @@
+[name] 新●设●计1
+[puzzle] w857584083
+[production-cost] 1400
+[power-usage] 871
+[lines-of-code] 32
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.94...................
+.B555555554.14........
+.A....1415555554......
+.A....14.14..894......
+.A.8..14154.16A.......
+.A.A..15554.156.......
+.356..................
+......................
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 2
+[code] 
+1:  tcp x3 -999
+2:+ tgt acc -999
+3:+ mul 10
+4:+ add x3
+5:- mov x3 acc
+6:  teq x1 p0
+7:- mov dat x2
+8:- mov acc x2
+9:- mov x2 dat#ans
+a:- mov -999 acc
+b:+ tgt acc -999
+c:+ mov acc x0
+d:- mov dat x0
+e:  slp 1
+
+[chip] 
+[type] DX3
+[x] 7
+[y] 3
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 15
+[y] 3
+[code] 
+# Calc Ans
+1:  slx x1
+2:  mov x1 acc
+3:  teq dat 0
+4:+ mov x1 x1
+5:+ jmp d
+6:  tcp dat 10
+7:- add x1
+8:- jmp c
+9:+ mul x1
+a:+ jmp c
+b:  sub x1
+c:  mov acc x1#ans
+d:  mov x0 dat#sym
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 4
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 4
+
+[chip] 
+[type] UC4X
+[x] 10
+[y] 6
+[code] 
+# Check the keypad
+# inputs, transfer
+# non -999 values,
+# intercept -999
+1:  mov x1 acc
+2:  mov acc x2
+3:  tcp acc -999
+4:+ mov acc x2
+5:  slp 1
+

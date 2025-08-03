@@ -1,0 +1,63 @@
+[name] 新●设●计1
+[puzzle] w2906528732
+[production-cost] 1000
+[power-usage] 437
+[lines-of-code] 19
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+....955555555555C.....
+....34..........A.....
+....94.15C......2.....
+....A..14A............
+...834.1574...........
+...354.1554...........
+......................
+......................
+
+[chip] 
+[type] UC4X
+[x] 5
+[y] 2
+[code] 
+1:  slx x1
+2:  mov x1 acc
+3:  tlt acc 100
+4:+ mov acc x2
+5:- mov acc x0
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 2
+
+[chip] 
+[type] RAM
+[x] 10
+[y] 2
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 4
+[code] 
+1:  slx x1
+2:  tcp x1 101
+3:- mov acc x0
+4:- jmp 1
+5:  mov x3 acc
+6:  sub 2
+7:  mov acc dat
+8:  mov dat x3
+9:  mov x2 acc
+a:+ sub x2
+b:+ jmp d
+c:  add x2
+d:  mov dat x3
+e:  mov acc x2
+

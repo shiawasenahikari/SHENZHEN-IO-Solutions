@@ -1,0 +1,107 @@
+[name] 新●设●计1
+[puzzle] w2894138957
+[production-cost] 2300
+[power-usage] 1902
+[lines-of-code] 55
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......14.....154......
+.........154.1C..14...
+.........154..A..14...
+......14..94..A.......
+.........16...A.......
+.........155556.......
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 2
+[code] 
+  mov x0 acc
+  tcp acc -999
++ mov x0 dat
++ mov x0 x3
++ mov acc x2 #x2
++ mov dat x2 #y2
++ mov x3 x2  #z2
++ mov x3 x2  #z2
++ mov dat x2 #y2
++ mov acc x2 #x2
++ mov x3 x2  #z2
++ mov dat x2 #y2
++ mov acc x2 #x2
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 3
+[code] 
+  slx x0
+  mov x0 acc
+  mov x1 dat
+  mov acc x0 #z1
+  mov dat x1 #z2
+  mov dat x1 #z2
+  mov acc x0 #z1
+  mov acc x0 #z1
+  mov dat x1 #z2
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 5
+[code] 
+  mov x0 acc
+  tcp acc -999
++ mov x0 dat
++ mov x0 x2
++ mov acc x3 #x1
++ mov dat x3 #y1
++ mov x2 x3  #z1
++ mov dat x3 #y1
++ mov x2 x3  #z1
++ mov x2 x3  #z1
++ mov acc x3 #x1
++ mov acc x3 #x1
++ mov dat x3 #y1
+  slp 1
+
+[chip] 
+[type] UC6
+[x] 15
+[y] 5
+[code] 
+  slx x0
+  mov x0 acc
+  add x0
+  add x0
+  mov acc x2
+  mov x0 acc
+  sub x0
+  mov acc x3
+  mov x0 acc
+  sub x0
+  mov acc x3
+  mov x0 acc
+  sub x0
+  mov acc x3
+
+[chip] 
+[type] UC4X
+[x] 11
+[y] 6
+[code] 
+  slx x1
+  mov x1 acc
+  mul x2
+  mov acc x3
+

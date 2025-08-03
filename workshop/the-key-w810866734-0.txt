@@ -1,0 +1,78 @@
+[name] 新●设●计1
+[puzzle] w810866734
+[production-cost] 1300
+[power-usage] 1395
+[lines-of-code] 25
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+...154..95555555C.....
+...14..16..154.1754...
+...........154.154....
+......................
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 3
+[code] 
+1:  slx x3
+2:  mov x3 dat
+3:  mov dat acc
+4:  dgt 2
+5:  mov acc x0
+6:  mov dat acc
+7:  dgt 1
+8:  mov acc x0
+9:  dst 0 dat
+a:  mov acc x0
+
+[chip] 
+[type] BANK
+[x] 9
+[y] 3
+[rom] 
+0,1,10,11,100,101,110,111,0,0,0,0,0,0
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 3
+[code] 
+1:  mov x3 x1
+2:  mov x0 acc
+3:  mov x2 x1
+4:  add x0
+5:  mov acc x3
+6:  slp 1
+
+[chip] 
+[type] DIAL17
+[x] 17
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4X
+[x] 1
+[y] 4
+[code] 
+1:  teq x3 1
+2:+ mov 4 acc
+3:- mov 0 acc
+4:  teq x3 1
+5:+ add 2
+6:  teq x3 1
+7:+ add 1
+8:  mov acc x2
+9:  slp 1
+

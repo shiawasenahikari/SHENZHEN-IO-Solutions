@@ -1,0 +1,106 @@
+[name] 新●设●计1
+[puzzle] w2398368018
+[production-cost] 2000
+[power-usage] 4036
+[lines-of-code] 40
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....14.14.154........
+.154.14.14.15555554...
+...........148........
+.954.14.14.156........
+.A94.14.14.14.........
+.2A........1C.........
+..35555555556.........
+......................
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 2
+[code] 
+1:@ teq 0 1
+2:- slx x2
+3:- mov x2 dat
+4:- mov dat p1
+5:- mov dat acc
+6:  mov acc x3
+7:  mov 0 x1
+8:  mov x0 x3
+9:  teq x1 dat
+a:- jmp 8
+b:  tgt x3 99
+c:+ add 1
+
+[chip] 
+[type] UC4X
+[x] 3
+[y] 3
+[code] 
+1:@ teq 0 0
+2:+ slx x0
+3:+ mov x0 acc
+4:+ mov 0 x3
+5:  mov x0 x2
+6:  teq acc x3
+7:+ mov acc x1
+
+[chip] 
+[type] RAM
+[x] 6
+[y] 3
+
+[chip] 
+[type] BRIDGE
+[x] 12
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 5
+[code] 
+1:  slx x2
+2:  mov x2 dat
+3:  mov dat acc
+4:  sub p1
+5:  mov acc x1
+6:  teq x0 x2
+7:- dst 2 1
+8:  teq x1 dat
+9:- jmp 6
+a:  teq dat 13
+b:+ mov -1 acc
+c:- tlt acc 100
+d:+ mov acc x3
+e:  mov acc x2
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 5
+
+[chip] 
+[type] UC4X
+[x] 3
+[y] 6
+[code] 
+1:  tgt x3 0
+2:- slx x1
+3:- mov x1 acc
+4:- mov x1 x2
+5:- teq x3 acc
+6:- jmp 4
+7:  mov -999 x2
+
+[chip] 
+[type] RAM
+[x] 6
+[y] 6
+

@@ -1,0 +1,69 @@
+[name] 新●设●计1
+[puzzle] w833965704
+[production-cost] 800
+[power-usage] 256
+[lines-of-code] 18
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+...15C.......1554.....
+.....A...15555C.......
+.....A14.14..8A.......
+.....354.14..AA.......
+......14.15556A.......
+.....154......2.......
+......................
+......................
+
+[chip] 
+[type] UC4
+[x] 7
+[y] 2
+[code] 
+1:  slx x0
+2:  mov x0 acc
+3:  dgt 1
+4:  add 10
+5:  mov acc p0
+6:  slp 1
+7:  gen p1 x0 p0
+8:  mov 1 x0
+
+[chip] 
+[type] BRIDGE
+[x] 6
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 4
+[code] 
+1:  mov p0 p1
+2:  tcp x2 -999
+3:+ mov p0 dat
+4:+ mov p0 x1
+5:  slp 1
+6:+ mov x2 x1
+7:+ slx x1
+8:+ add x1
+9:+ mov dat x3
+a:+ mov acc x3
+
+[chip] 
+[type] RADIO
+[x] 10
+[y] 4
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] BRIDGE
+[x] 13
+[y] 5
+

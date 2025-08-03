@@ -1,0 +1,97 @@
+[name] 新●设●计1
+[puzzle] w901074257
+[production-cost] 1900
+[power-usage] 136
+[lines-of-code] 33
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+....14...1555554......
+....14.155C95554......
+....14.15CA34.........
+.155555556354.14......
+....8.........14......
+....3555555555C.......
+..............2.......
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 4
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 12
+[y] 3
+[code] 
+1:  slx x1
+2:  mov x1 acc
+3:  tgt acc 5
+4:- mul 3
+5:+ mul -3
+6:+ add 39
+7:  mov acc x3
+8:+ mov x2 acc
+9:+ mov x2 dat
+a:- mov x2 x0
+b:- mov x2 x0
+c:  mov x2 x0
+d:+ mov dat x0
+e:+ mov acc x0
+
+[chip] 
+[type] BANK
+[x] 15
+[y] 3
+[rom] 
+672,438,951,276,0,0,816,357,492,618,753,294,834,159
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 5
+[code] 
+1:  slx x2
+2:  dst 1 x2
+3:  mov x2 x1
+4:  dst 0 x1
+5:  teq acc x0
+6:- teq acc x0
+7:- mov -999 x2
+8:- gen p0 1 0
+9:+ mov x1 x3
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 5
+
+[chip] 
+[type] UC6
+[x] 15
+[y] 5
+[code] 
+1:  slx x1
+2:  mov x1 dat
+3:  mov dat acc
+4:  dgt 2
+5:  mov acc x0
+6:  mov dat acc
+7:  dgt 1
+8:  mov acc x0
+9:  dst 0 dat
+a:  mov acc x0
+
+[chip] 
+[type] BANK
+[x] 2
+[y] 6
+[rom] 
+-1,81,61,83,43,-1,-1,27,67,29,49,-1,-1,-1
+

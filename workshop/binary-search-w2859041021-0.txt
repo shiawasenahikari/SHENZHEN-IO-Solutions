@@ -1,0 +1,71 @@
+[name] 新●设●计1
+[puzzle] w2859041021
+[production-cost] 1100
+[power-usage] 139
+[lines-of-code] 26
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+....15554.1555C.......
+....14154.....A.......
+....14.14.14.16.......
+....14155554..........
+.......15554..........
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 7
+[y] 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 1
+[code] 
+1:  mov p0 acc
+2:  tcp p1 p0
+3:+ add p1
+4:+ mul 5
+5:  mov acc x0
+6:+ dgt 2
+7:+ mov acc dat
+8:  mov x0 acc
+9:+ dgt 1
+a:+ dst 1 dat
+b:  mov acc x0
+c:  teq x1 10
+d:- slp 9
+e:+ slx x0
+
+[chip] 
+[type] DX3
+[x] 5
+[y] 2
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 3
+[code] 
+1:@ mov 100 p1
+2:  mov x2 x2
+3:  mov x2 acc
+4:  mov acc x0
+5:  teq x1 10
+6:+ slx x2
+7:  tcp x1 10
+8:- add 1
+9:- mov acc p0
+a:+ sub 1
+b:+ mov acc p1
+c:  slp 9
+

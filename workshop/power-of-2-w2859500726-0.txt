@@ -1,0 +1,94 @@
+[name] 新●设●计1
+[puzzle] w2859500726
+[production-cost] 2000
+[power-usage] 1321
+[lines-of-code] 48
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.14...95554...........
+.14...34..............
+....1C94.14...........
+.14..AA..14...........
+.14.1634..............
+....1554.14...........
+.........14...........
+......................
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 1
+[code] 
+  mov acc x3
+  dst 0 dat
+  mov acc x2
+  slp 2
+  mov dat acc
+  dst 2 0
+  add acc
+  tgt x1 99
++ add 1
+  mov acc x0
+  mov acc dat
+  dgt 1
+
+[chip] 
+[type] UC6
+[x] 2
+[y] 2
+[code] 
+  mov acc x1
+  dst 0 dat
+  mov acc x0
+  slp 2
+  mov dat acc
+  dst 2 0
+  add acc
+  tgt x3 99
++ add 1
+  mov acc x2
+  mov acc dat
+  dgt 1
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 4
+[code] 
+  mov acc x3
+  dst 0 dat
+  mov acc x2
+  mov dat acc
+  dgt 2
+  mov acc x0
+  slp 2
+  mov dat acc
+  add acc
+  tgt x1 99
++ add 1
+  mov acc dat
+  dgt 1
+
+[chip] 
+[type] UC6
+[x] 2
+[y] 5
+[code] 
+@ mov 1 dat
+  mov acc x1
+  dst 0 dat
+  mov acc x0
+  slp 2
+  mov dat acc
+  dst 2 0
+  add acc
+  mov acc x2
+  mov acc dat
+  dgt 1
+

@@ -1,0 +1,96 @@
+[name] 新●设●计1
+[puzzle] w854438620
+[production-cost] 1700
+[power-usage] 176013
+[lines-of-code] 33
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.9554.................
+.A954.14.14.1555C.....
+.AA94.14.14.14..A.....
+.AA35555554.14.16.....
+.A355555555554.14.....
+.A.............14.....
+.355555555555555554...
+......................
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 2
+[code] 
+1:  slx x1
+2:  mov x1 x0
+3:  mov x2 x0
+4:  mov x0 x0
+5:  mov x3 x0
+6:  mov x0 x0
+7:  mov p1 x0
+8:  mov x0 x1
+
+[chip] 
+[type] DIAL17
+[x] 16
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL18
+[x] 16
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 4
+[code] 
+1:@ mov x3 p1
+2:  slx x2
+3:  mov x2 dat
+4:  mov p0 acc
+5:  sub x2
+6:  mov acc x1
+7:  mov x0 acc
+8:  tlt acc dat
+9:+ add 1
+a:+ mov acc x2
+b:- mov dat x2
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 5
+[code] 
+1:  slx x0
+2:  mov x0 acc
+3:  mov -9 x3
+4:  mov 999 x2
+5:  teq x3 0
+6:- jmp 4
+7:  mov 0 x2
+8:  mov x3 p0
+9:  mov 999 x1
+a:  tgt acc 1
+b:+ mov x1 x2
+c:+ sub 1
+d:+ jmp 8
+e:  mov x1 x0
+
+[chip] 
+[type] RAM
+[x] 7
+[y] 5
+
+[chip] 
+[type] DIAL19
+[x] 13
+[y] 5
+[is-puzzle-provided] true
+

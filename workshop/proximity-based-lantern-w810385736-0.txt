@@ -1,0 +1,60 @@
+[name] 新●设●计1
+[puzzle] w810385736
+[production-cost] 500
+[power-usage] 187
+[lines-of-code] 14
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..........15C.........
+............A.........
+........95C.A.........
+........A.2.A.........
+........A...34........
+........A...14.14.....
+........355554.14.....
+......................
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 1
+[code] 
+1:  mov x0 acc
+2:  sub x2
+3:  mul acc
+4:  mov acc dat
+5:  mov x0 acc
+6:  sub x3
+7:  mul acc
+8:  add dat
+9:  mov acc dat
+a:  mov x1 acc
+b:  mul x1
+c:  tgt dat acc
+d:- gen p0 5 0
+e:+ slp 5
+
+[chip] 
+[type] DIAL18
+[x] 16
+[y] 1
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL17
+[x] 11
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL19
+[x] 16
+[y] 2
+[is-puzzle-provided] true
+

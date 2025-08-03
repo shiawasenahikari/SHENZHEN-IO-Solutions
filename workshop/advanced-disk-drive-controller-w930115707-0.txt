@@ -1,0 +1,88 @@
+[name] 新●设●计1
+[puzzle] w930115707
+[production-cost] 1500
+[power-usage] 544
+[lines-of-code] 31
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+.95555554......1554...
+.2..14.1555554.14.....
+....14.1495554.1554...
+.8.....1569554.14.....
+.3555555556.94..954...
+............35556.....
+......................
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 2
+[code] 
+1:  slx x0
+2:  mov x0 x3
+3:  mov x0 x3
+4:  slx x0
+5:  mov x0 acc
+6:  teq acc -1
+7:+ mov p1 x1
+8:- mov acc p0
+9:- slp 1
+a:- mov 0 p0
+
+[chip] 
+[type] UC6
+[x] 5
+[y] 3
+[code] 
+1:  mov x3 acc
+2:  tcp -999 acc
+3:- mov acc x2
+4:- mov dat x2
+5:- mov acc dat
+6:- mov x3 acc
+7:- teq acc x1
+8:+ teq p1 100
+9:+ mov x3 x2
+a:  slp 1
+b:  mov x0 x1
+c:- jmp 7
+
+[chip] 
+[type] BRIDGE
+[x] 16
+[y] 3
+
+[chip] 
+[type] BANK
+[x] 2
+[y] 4
+[rom] 
+1,2,3,4,5,6,7,0,0,0,0,0,0,0
+
+[chip] 
+[type] BRIDGE
+[x] 8
+[y] 4
+
+[chip] 
+[type] UC4
+[x] 13
+[y] 5
+[code] 
+1:  mov 50 p1
+2:  slx x1
+3:  mov x1 acc
+4:  sub x1
+5:  tcp acc p0
+6:- mul -1
+7:- gen p1 0 acc
+8:+ gen p1 acc 0
+9:  mov 100 p0
+

@@ -1,0 +1,101 @@
+[name] 新●设●计1
+[puzzle] w901660953
+[production-cost] 1600
+[power-usage] 464
+[lines-of-code] 39
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+....14.1555554.15C....
+....14..955554...A....
+.1555C..A95554.1434...
+.8..16..A2.....1554...
+.34.1555755554.14.....
+.........89554........
+.........22...........
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 2
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 2
+[code] 
+1:  slx x3
+2:  mov x3 acc
+3:  mov x3 dat
+4:  tgt acc 3
+5:+ sub 4
+6:+ mov dat p1
+7:  tgt acc 1
+8:+ mov dat p0
+9:+ tcp acc 2
+a:- teq acc 1
+b:+ mov dat x1
+
+[chip] 
+[type] UC4
+[x] 2
+[y] 3
+[code] 
+1:  slx x1
+2:  mov x1 acc
+3:  teq acc -1
+4:- mov acc p0
+5:+ mov p1 x1
+
+[chip] 
+[type] BRIDGE
+[x] 16
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 5
+[code] 
+1:  slx x0
+2:  mov x0 acc
+3:  mov x0 dat
+4:  teq dat -999
+5:+ mov acc x2
+6:+ jmp e
+7:  mov dat x2
+8:  mov p0 dat
+9:  tcp acc 1
+a:+ mov p1 dat
+b:- mov -1 x1
+c:- mov x1 dat
+d:  mov dat x0
+e:  mov dat x2
+
+[chip] 
+[type] RADIO
+[x] 2
+[y] 6
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4X
+[x] 5
+[y] 6
+[code] 
+1:  slp 1
+2:  mov x0 acc
+3:  tcp acc -999
+4:+ mov acc x1
+5:+ tcp acc -1
+6:+ mov x0 x3
+7:+ mov x0 x3
+8:+ teq acc 1
+9:+ mov x3 x1
+

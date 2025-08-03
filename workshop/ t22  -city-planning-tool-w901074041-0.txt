@@ -1,0 +1,97 @@
+[name] 新●设●计1
+[puzzle] w901074041
+[production-cost] 2300
+[power-usage] 4276
+[lines-of-code] 40
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....155554...........
+..8...95554.......8...
+..34..34....1C95556...
+..14.154.14..A34.14...
+.....1C..14..354.1C...
+..15556...........2...
+......................
+......................
+
+[chip] 
+[type] UC6
+[x] 3
+[y] 3
+[code] 
+1:  slx x0
+2:  mov x0 dat
+3:  mov x1 acc
+4:  mov dat x3 #A
+5:  mov acc x3 #B
+6:  mov dat x3 #A
+7:  mov x2 dat
+8:  mov dat x3 #C
+9:  mov acc x3 #B
+a:  mov dat x3 #C
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 3
+[code] 
+1:@ teq 0 1
+2:- slx x1
+3:- mov 0 x3
+4:  mov x1 acc
+5:  sub x1
+6:  mul acc
+7:- mov acc x2
+8:+ add x2
+9:+ mov acc x0
+a:+ jmp e
+b:  teq x3 3
+c:- jmp 4
+d:  mov 0 x3
+e:  tlt x3 3
+
+[chip] 
+[type] RAM
+[x] 10
+[y] 3
+
+[chip] 
+[type] UC4X
+[x] 15
+[y] 3
+[code] 
+1:  slx x1
+2:  mov x1 x0
+3:  mov x1 x2
+4:  mov x1 x3
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 5
+[code] 
+1:@ teq 0 1
+2:- slx x1
+3:- mov x1 dat
+4:- mov 25 acc
+5:  mov acc x0
+6:  mul acc
+7:  tgt acc dat
+8:+ mov x0 acc
+9:+ sub 1
+a:- mov x0 x2
+
+[chip] 
+[type] UC4X
+[x] 3
+[y] 6
+[code] 
+1:  slx x3
+2:  mov x3 x3
+

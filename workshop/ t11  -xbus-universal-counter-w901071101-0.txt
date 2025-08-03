@@ -1,0 +1,66 @@
+[name] 新●设●计1
+[puzzle] w901071101
+[production-cost] 600
+[power-usage] 256
+[lines-of-code] 14
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+.955555C..............
+.2.14.16..............
+.1414.1555D55555554...
+.14...1C..34..........
+......16..............
+......................
+......................
+
+[chip] 
+[type] DX3
+[x] 2
+[y] 2
+[rotated] true
+
+[chip] 
+[type] DIAL18
+[x] 5
+[y] 2
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 3
+[code] 
+1:@ mov x0 acc
+2:  mov acc x3
+3:  slp 1
+4:  tcp x1 p1
+5:- add x3
+6:+ sub x3
+7:+ teq x1 10
+8:+ mov x0 acc
+9:- tcp acc x0
+a:- add x2
+b:- sub x0
+c:+ tcp acc x2
+d:+ sub x2
+e:+ add x0
+
+[chip] 
+[type] DIAL19
+[x] 11
+[y] 3
+[is-puzzle-provided] true
+
+[chip] 
+[type] DIAL17
+[x] 2
+[y] 5
+[is-puzzle-provided] true
+

@@ -1,0 +1,87 @@
+[name] 新●设●计1
+[puzzle] w2443553917
+[production-cost] 1700
+[power-usage] 2256
+[lines-of-code] 37
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+..955555555555555C....
+..A9555555555555CA....
+..A34.155555555CAA....
+.1E94.154.154.16A34...
+..AA..154.154.156.....
+..A34.154.1C..1C......
+..354.154..35556......
+......................
+
+[chip] 
+[type] UC4X
+[x] 4
+[y] 1
+[code] 
+1:  mov x1 x0
+2:  mov x0 x3
+3:  mov x2 x1
+4:  mov x1 acc
+5:  mov acc x0
+6:  tcp acc -2
+7:+ mov x0 x3
+8:+ mov acc x2
+9:  slx x1
+
+[chip] 
+[type] RAM
+[x] 8
+[y] 1
+
+[chip] 
+[type] UC6
+[x] 12
+[y] 2
+[code] 
+1:@ teq 0 1
+2:- mov -1 x2
+3:- mov -1 x0
+4:- teq x1 0
+5:- jmp 2
+6:  mov x3 x1
+7:  teq x0 p1
+8:+ jmp d
+9:  teq x1 0
+a:- jmp 7
+b:  teq x0 -1
+c:- jmp b
+d:  mov x1 x3
+e:  slx x3
+
+[chip] 
+[type] UC6
+[x] 4
+[y] 3
+[code] 
+1:  mov x1 dat
+2:  mov dat p1
+3:  mov 0 x0
+4:  mov -1 acc
+5:  add x0
+6:  mov acc x1
+7:  tcp x1 -1
+8:- jmp e
+9:  mov acc x1
+a:  mov acc x3
+b:+ mov dat x2
+c:+ jmp e
+d:  mov -1 x2
+e:  slx x1
+
+[chip] 
+[type] RAM
+[x] 8
+[y] 3
+

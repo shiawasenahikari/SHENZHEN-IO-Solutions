@@ -1,0 +1,120 @@
+[name] 新●设●计1
+[puzzle] w2836475996
+[production-cost] 2600
+[power-usage] 600
+[lines-of-code] 62
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.14...................
+.14.1C94..............
+.95556A..1C...........
+.34..974..A...........
+.94.1694..34..........
+.A..156..1C..1D4......
+.35555555575556..14...
+......................
+
+[chip] 
+[type] UC6
+[x] 15
+[y] 1
+[code] 
+1:  mov x1 x2
+2:  mov x1 dat
+3:  mov dat acc
+4:  dgt 2
+5:  dst 1 0
+6:  mov acc x2
+7:  mov dat acc
+8:  dgt 1
+9:  dst 1 0
+a:  mov acc x2
+b:  dst 0 dat
+c:  dst 1 0
+d:  mov acc x2
+e:  slp 4
+
+[chip] 
+[type] UC6
+[x] 2
+[y] 2
+[code] 
+1:  mov x0 dat
+2:  tcp dat 0
+3:- mov dat x2
+4:- jmp e
+5:  tgt dat 999
+6:- mov 0 x1
+7:- jmp c
+8:  mov dat acc
+9:  sub 999
+a:  tgt acc 998
+b:- mov 1 x1
+c:- mov dat x1
+d:+ mov dat x3
+e:  slx x0
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 2
+[code] 
+1:  slx x1
+2:  mov x1 dat
+3:  tlt dat -999
+4:- mov 0 x2
+5:- jmp a
+6:  mov dat acc
+7:  add 999
+8:  tlt acc -998
+9:- mov 1 x2
+a:- mov dat x2
+b:+ mov dat x0
+
+[chip] 
+[type] UC4X
+[x] 11
+[y] 2
+[code] 
+1:  slx x0
+2:  dst 2 x0
+3:  dst 1 x0
+4:  dst 0 x0
+5:  tgt acc -998
+6:+ tlt acc +998
+7:+ mov 2 x2
+8:- mov 1 x2
+9:  mov acc x2
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 5
+[code] 
+1:  slx x1
+2:  mov x1 dat
+3:  mov dat acc
+4:  dgt 2
+5:  mov acc x2
+6:  mov dat acc
+7:  dgt 1
+8:  mov acc x2
+9:  mov dat x2
+
+[chip] 
+[type] UC4
+[x] 2
+[y] 6
+[code] 
+1:  mov x0 acc
+2:  tcp acc p0
+3:+ mov 100 p0
+4:  mov acc x1
+5:  slx x0
+

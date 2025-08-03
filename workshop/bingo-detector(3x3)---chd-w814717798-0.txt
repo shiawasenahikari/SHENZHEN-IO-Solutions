@@ -1,0 +1,91 @@
+[name] 新●设●计1
+[puzzle] w814717798
+[production-cost] 1700
+[power-usage] 1302
+[lines-of-code] 34
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......15555555555C....
+..95555555C......2....
+..A..154.16...........
+..A..154.154.15C......
+..34.........1CA......
+..14.154.155556A......
+.....154.1555556......
+......................
+
+[chip] 
+[type] UC6
+[x] 3
+[y] 1
+[code] 
+1:  mov x1 acc
+2:  tcp acc -999
+3:+ tgt acc -1
+4:+ mov acc x3
+5:+ mov 1 x2
+6:- mov 0 x0
+7:  slp 1
+8:- mov 1 x3
+9:- mov 0 x2
+a:- teq x3 10
+b:- jmp 9
+
+[chip] 
+[type] RAM
+[x] 7
+[y] 1
+
+[chip] 
+[type] UC6
+[x] 11
+[y] 3
+[code] 
+1:  slx x1
+2:  mov x1 dat
+3:  mov dat acc
+4:  dgt 2
+5:  mov acc x3
+6:  teq x2 1
+7:+ mov dat acc
+8:+ dgt 1
+9:+ mov acc x3
+a:+ teq x2 1
+b:+ dst 0 dat
+c:+ mov acc x3
+d:+ mov x2 x1
+e:- mov 0 x1
+
+[chip] 
+[type] BANK
+[x] 3
+[y] 4
+[rom] 
+123,456,789,147,258,369,159,357,0,0,0,0,0,0
+
+[chip] 
+[type] UC4X
+[x] 7
+[y] 4
+[code] 
+1:@ teq 0 0
+2:+ slx x3
+3:+ mov x3 x1
+4:  mov x0 x2
+5:  teq x2 1
+6:+ mov 100 x0
+7:+ jmp 2
+8:- teq x1 8
+9:+ mov 0 x0
+
+[chip] 
+[type] BRIDGE
+[x] 6
+[y] 5
+

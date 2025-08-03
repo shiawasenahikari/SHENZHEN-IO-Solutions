@@ -1,0 +1,124 @@
+[name] 新●设●计1
+[puzzle] w1994297434
+[production-cost] 2400
+[power-usage] 1961
+[lines-of-code] 42
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.9554...154.1555554...
+.A154...154.1555C.....
+.2.141C..8..14..A.....
+..154.A..34.....A.....
+.8.14.34....15556.....
+.A154154....14.14.....
+.3555554.15554.14.....
+......................
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 1
+[code] 
+1:  slp 1
+2:  mov x0 acc
+3:  add x1
+4:  add x1
+5:  tgt p0 0
+6:- add 100
+7:+ add 500
+8:  mov acc x2
+
+[chip] 
+[type] UC4X
+[x] 13
+[y] 1
+[code] 
+1:  slx x1
+2:+ mov 0 x3
+3:  mov x1 acc
+4:  tcp 100 acc
+5:- teq acc x2
+6:+ mov x3 acc
+7:- teq x3 0
+8:- jmp 5
+9:  mov acc x0
+
+[chip] 
+[type] BANK
+[x] 16
+[y] 1
+[rom] 
+220,812,432,223,333,733,230,833,433,711,102,633,513,831
+
+[chip] 
+[type] DX3
+[x] 4
+[y] 2
+[rotated] true
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 2
+[code] 
+1:  slx x2
+2:  mov x2 acc
+3:  teq acc 100
+4:+ jmp 1
+5:  mov acc dat
+6:  tcp acc 100
+7:- mov acc x0
+8:+ mov acc dat
+9:  teq acc 100
+a:- slx x2
+b:- mov x2 acc
+c:- jmp 6
+d:  mov -1 x0
+e:  mov dat x3
+
+[chip] 
+[type] RADIO
+[x] 13
+[y] 4
+[rotated] true
+[is-puzzle-provided] true
+
+[chip] 
+[type] DX3
+[x] 4
+[y] 5
+[rotated] true
+
+[chip] 
+[type] BRIDGE
+[x] 9
+[y] 5
+
+[chip] 
+[type] UC6
+[x] 10
+[y] 5
+[code] 
+1:  slx x3
+2:  tcp x3 100
+3:+ gen p1 1 1
+4:+ gen p1 1 1
+5:- mov x1 acc
+6:- mov 0 x1
+7:- mov x0 x2
+8:- teq x1 acc
+9:- jmp 7
+a:+ gen p1 1 0
+b:+ mov 0 x1
+
+[chip] 
+[type] RAM
+[x] 6
+[y] 6
+

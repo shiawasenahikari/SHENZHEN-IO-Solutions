@@ -1,0 +1,97 @@
+[name] 新●设●计1
+[puzzle] w2965093840
+[production-cost] 1500
+[power-usage] 1284
+[lines-of-code] 42
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.954..8..15C8..1C.....
+.A...174..162..16.....
+.A14.1554.1554.15C....
+.354.1C14...14.1CA....
+..155C35555555556A....
+.....A...........A....
+...157555555555556....
+......................
+
+[chip] 
+[type] BRIDGE
+[x] 2
+[y] 3
+
+[chip] 
+[type] UC6
+[x] 3
+[y] 4
+[code] 
+1:  mov x1 p0  #a
+2:  mov x1 x3  #b
+3:  mov x1 x3  #c
+4:  teq x3 50
+5:+ teq p1 25
+6:  mov x1 acc #d
+7:  mov x1 dat #e
+8:  mov acc x2
+9:  mov dat x2
+a:+ teq acc 75
+b:+ teq dat 100
+c:- mov -77 x2
+d:+ mov 777 x2
+e:  slx x1
+
+[chip] 
+[type] BRIDGE
+[x] 7
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 8
+[y] 4
+[code] 
+1:  mov x1 p0
+2:  mov x1 acc
+3:  mov acc p1
+4:  mov acc x1
+5:  teq x3 777
+6:+ slp 1
+7:+ gen p0 p1 1
+8:+ mov 25 p0
+9:+ mov 50 p1
+a:+ slp 1
+b:+ gen p0 p1 1
+c:+ mov 25 p0
+d:+ mov 50 p1
+e:  slx x1
+
+[chip] 
+[type] BRIDGE
+[x] 12
+[y] 4
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 4
+[code] 
+1:  mov x2 p0
+2:  mov x2 p1
+3:  teq x2 777
+4:- mov -77 x1
+5:+ mov 777 x3
+6:+ mov 777 x1
+7:+ slp 1
+8:+ gen p0 p1 1
+9:+ mov 75 p0
+a:+ gen p1 1 0
+b:+ gen p0 p1 1
+c:+ mov 75 p0
+d:+ mov 100 p1
+e:  slx x2
+

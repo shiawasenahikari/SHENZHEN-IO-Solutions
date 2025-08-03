@@ -1,0 +1,71 @@
+[name] 新●设●计1
+[puzzle] w901070589
+[production-cost] 1200
+[power-usage] 373
+[lines-of-code] 24
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+.....154..............
+.....1D4..............
+......A..1555C........
+......34.....A........
+......94.14..A........
+......A..14..A........
+......35555556........
+......................
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 2
+[code] 
+1:@ teq 0 0
+2:+ slx x1
+3:+ mov x1 acc
+4:  mov x2 dat
+5:  tlt acc dat
+6:+ mov 0 x0
+7:- mov 1 x0
+8:- sub dat
+9:  teq x3 9
+a:+ mov acc x0
+b:+ mov 0 x3
+
+[chip] 
+[type] BANK
+[x] 10
+[y] 2
+[rom] 
+512,256,128,64,32,16,8,4,2,0,0,0,0,0
+
+[chip] 
+[type] UC6
+[x] 7
+[y] 5
+[code] 
+1:  slp 1
+2:  mov x0 acc
+3:  tcp -999 acc
+4:- mov x0 dat
+5:- tgt dat -999
+6:- mov acc x2
+7:- jmp 1
+8:+ mul 2
+9:+ add dat
+a:+ mov x0 dat
+b:+ tgt dat -999
+c:+ jmp 8
+d:- mov acc x1
+
+[chip] 
+[type] RADIO
+[x] 3
+[y] 6
+[is-puzzle-provided] true
+

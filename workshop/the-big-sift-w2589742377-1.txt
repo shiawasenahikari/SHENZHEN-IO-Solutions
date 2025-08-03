@@ -1,0 +1,134 @@
+[name] 新●设●计2
+[puzzle] w2589742377
+[production-cost] 2900
+[power-usage] 37073
+[lines-of-code] 61
+
+[traces] 
+......................
+......................
+......................
+......................
+......................
+......................
+......................
+.....154..............
+.....14.14..94.14.....
+.....95554.16..14.....
+.....34....1C.........
+........14..34.14.....
+........14.....14.....
+......................
+
+[chip] 
+[type] UC6
+[x] 6
+[y] 1
+[code] 
+1:@ teq 0 0
+2:+ mov x0 dat
+3:+ tgt dat -1
+4:+ mov dat x3
+5:+ mov x2 acc
+6:+ not
+7:+ mov dat x3
+8:+ mov acc x2
+9:+ jmp 2
+a:  mov x3 dat
+b:  teq x2 100
+c:+ mov dat x0
+d:+ slx x0
+
+[chip] 
+[type] RAM
+[x] 9
+[y] 1
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 1
+[code] 
+1:@ teq 0 0
+2:+ mov x1 dat
+3:+ tgt dat -1
+4:+ mov dat x3
+5:+ mov x2 acc
+6:+ not
+7:+ mov dat x3
+8:+ mov acc x2
+9:+ jmp 2
+a:  mov x3 dat
+b:  teq x2 100
+c:+ mov dat x1
+d:+ slx x1
+
+[chip] 
+[type] RAM
+[x] 16
+[y] 1
+
+[chip] 
+[type] UC6
+[x] 9
+[y] 3
+[code] 
+1:  mov x0 acc
+2:  tgt acc -1
+3:+ mov acc dat
+4:+ dgt 2
+5:  mov acc x3
+6:- mov acc x2
+7:+ mov x0 x2
+8:+ dst 0 dat
+9:  mov acc x1
+a:- dst 2 x3
+b:- dst 1 x2
+c:- dst 0 x1
+d:- mov acc x0
+e:- slx x0
+
+[chip] 
+[type] UC6
+[x] 13
+[y] 4
+[code] 
+1:@ teq 0 0
+2:+ mov x1 dat
+3:+ tgt dat -1
+4:+ mov dat x3
+5:+ mov x2 acc
+6:+ not
+7:+ mov dat x3
+8:+ mov acc x2
+9:+ jmp 2
+a:  mov x3 dat
+b:  teq x2 100
+c:+ mov dat x1
+d:+ slx x1
+
+[chip] 
+[type] RAM
+[x] 16
+[y] 4
+
+[chip] 
+[type] RADIO
+[x] 3
+[y] 5
+[is-puzzle-provided] true
+
+[chip] 
+[type] UC4X
+[x] 6
+[y] 5
+[code] 
+1:  mov x0 acc
+2:  teq acc -999
+3:+ mov -1 x2
+4:+ mov x2 x1
+5:+ slx x1
+6:  mov acc x2
+7:  dgt 1
+8:  mov acc x2
+
